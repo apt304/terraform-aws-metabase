@@ -87,6 +87,10 @@ variable "snapshot_identifier" {
 variable "environment" {
   description = "(Optional) Additional container environment variables"
   default     = []
+  type        = list(object({
+    name  = string,
+    value = string
+  }))
 }
 
 variable "java_timezone" {
