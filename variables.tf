@@ -1,9 +1,11 @@
 variable "private_subnet_ids" {
   description = "(Required) IDs of the subnets to which the services and database will be deployed"
+  type        = list(string)
 }
 
 variable "public_subnet_ids" {
   description = "(Required) IDs of the subnets to which the load balancer will be deployed"
+  type        = list(string)
 }
 
 variable "domain" {
