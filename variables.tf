@@ -107,3 +107,9 @@ variable "auto_pause" {
   description = "(Optional) https://www.terraform.io/docs/providers/aws/r/rds_cluster.html#auto_pause"
   default     = false
 }
+
+variable "engine_version" {
+  description = "(Optional) https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster#engine_version"
+  default     = "5.6.10a"
+  type        = string
+}
