@@ -4,7 +4,7 @@ resource "aws_rds_cluster" "this" {
   copy_tags_to_snapshot           = true
   engine                          = "aurora"
   engine_mode                     = "serverless"
-  engine_version                  = "5.7.mysql_aurora.2.10.0"
+  engine_version                  = var.engine_version
   database_name                   = "metabase"
   master_username                 = "root"
   master_password                 = random_string.this.result
